@@ -1,7 +1,11 @@
+before '*' do
+	Book.write('search_letters', ['#'] + Array('a'..'z'))
+end
+
+
 get '/' do
 	list = {}
-	
 	list['bar'] = 'foo'
 
-	erb :'index/index', :locals => list
+	tome 'index/index', list
 end
