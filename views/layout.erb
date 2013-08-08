@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<base href="<%= request.base_url %>"> 
+	<title><%= Configure::get('name') %></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="author" content="">
+
+	<!-- Le styles -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+	<link href="<%= assets "css", "bootstrap-responsive" %>" rel="stylesheet" />
+	<style type="text/css">
+	body {
+		padding-top: 60px!important;
+		padding-bottom: 40px;
+	}
+	</style>
+	<script type="text/javascript" src="<%= assets "js", "underscore" %>"></script>
+	<script type="text/javascript" src="<%= assets "js", "jquery" %>"></script>
+	<script type="text/javascript" src="<%= assets "js", "angular" %>"></script>
+	<script type="text/javascript" src="<%= assets "js", "bootstrap" %>"></script>
+	<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    	<script src="<%= assets "js", "html5shiv" %>"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+	  <div>
+		
+		</div>
+	    <div class="container" id="main-conteiner">
+  		<div class="container">
+  			<%= link_to "http://google.com.br/" %>
+  			<%= link_to "" %>
+  			<%= yield %>
+  		</div>
+  		<hr>  
+  		<footer>
+  			<p>&copy; Company 2013</p>
+  		</footer>
+  	</div>
+</body>
+</html>
