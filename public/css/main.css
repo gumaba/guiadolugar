@@ -1,7 +1,12 @@
 @import url('http://fonts.googleapis.com/css?family=Amaranth:400,400italic,700,700italic');
 
 body {
-    background-image: url(../img/bg.png);
+    background-image: url('../img/bg.png');
+}
+
+.btn {
+    background-image: none !important;
+    text-shadow: none;
 }
 
 .center-text {
@@ -37,10 +42,14 @@ body {
 
 .hero-unit .search .big-search-text {
     width: 100%;
-    font-size: 160%;
-    height: 100%;
-    padding: 2%;
+    font-size: 1.8em;
+    height: 50px;
+    min-height: 50px;
+    max-height: 50px;
+    padding-left: 2%;
+    padding-right: 2%;
     margin: 0px;
+    line-height: 50px;
     outline: none;
     border: none;
     box-shadow: none;
@@ -57,7 +66,7 @@ body {
     top: 20%;
     height: 60%;
     width: 150px;
-    font-size: .8em;
+    font-size: 16px;
     font-weight: bold;
     text-shadow: 3px 3px 10px black;
 }
@@ -70,9 +79,44 @@ body {
     margin-bottom: 10px;
     text-align: center;
     font-size: 10px;
+    overflow: hidden;
+    height: 44px;
+    position: relative;
+}
+.hero-unit .search-letters .arrow.arrow-left{
+    left: 0px;
+}
+.hero-unit .search-letters .arrow.arrow-right{
+    right: 0px;
+    background-position: 30px 30px;
 }
 
-.hero-unit .search-letters a {
+.hero-unit .search-letters.with-arrows{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.hero-unit .search-letters.with-arrows .arrow{
+    display: block;
+}
+
+.hero-unit .search-letters .arrow{
+    display: none;
+    position: absolute;
+    font-size: 30px;
+    top: 0px;
+    bottom: 0px;
+    padding-top: 6px;
+    z-index: 2;
+    width: 30px;
+    background-image: url('../img/slider-arrow.png');
+}
+
+.hero-unit .search-letters .search-letters-wrapper {
+    width: 950px;
+    position: relative;
+}
+
+.hero-unit .search-letters a.btn {
     height: 40px;
     line-height: 40px;
     width: 27px;
@@ -87,7 +131,20 @@ body {
     margin: 1px;
 }
 
-.hero-unit .search-letters a:hover {
+.hero-unit .search-letters a.btn:hover {
     background-color: purple !important;
     color: white;
+}
+
+.btn.btn-purple {
+    background-color: #6b0199;
+}
+
+.content_wrapper {
+    background: none !important;
+}
+
+footer{
+    background: none;
+    border: none;
 }

@@ -7,8 +7,9 @@
     <file path="/test.rb" changelist="c33c729f-4339-4522-bdd1-e744a9572f62" time="1375693179161" ignored="false" />
     <file path="/hash.rb" changelist="c33c729f-4339-4522-bdd1-e744a9572f62" time="1375690027393" ignored="false" />
     <file path="/deps.sh" changelist="c33c729f-4339-4522-bdd1-e744a9572f62" time="1375693363351" ignored="false" />
-    <file path="/layout.erb" changelist="c33c729f-4339-4522-bdd1-e744a9572f62" time="1376001770595" ignored="false" />
-    <file path="/main.css" changelist="c33c729f-4339-4522-bdd1-e744a9572f62" time="1376002146661" ignored="false" />
+    <file path="/layout.erb" changelist="c33c729f-4339-4522-bdd1-e744a9572f62" time="1376149051389" ignored="false" />
+    <file path="/main.css" changelist="c33c729f-4339-4522-bdd1-e744a9572f62" time="1376151740946" ignored="false" />
+    <file path="/main.js" changelist="c33c729f-4339-4522-bdd1-e744a9572f62" time="1376150934243" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +41,7 @@
       <file leaf-file-name="main.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/main.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="10" column="3" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -49,10 +50,8 @@
       <file leaf-file-name="layout.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/layout.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="0" selection-end="1826" vertical-scroll-proportion="-3.75">
-              <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state line="38" column="12" selection-start="1872" selection-end="1872" vertical-scroll-proportion="-15.038462">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -60,7 +59,16 @@
       <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="17" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.5888158">
+            <state line="43" column="14" selection-start="794" selection-end="794" vertical-scroll-proportion="0.21058315">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="43" column="48" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -80,14 +88,18 @@
         <option value="$PROJECT_DIR$/test.rb" />
         <option value="$PROJECT_DIR$/deps.sh" />
         <option value="$PROJECT_DIR$/views/layout.erb" />
+        <option value="$PROJECT_DIR$/public/js/jquery.ui.js" />
+        <option value="$PROJECT_DIR$/public/js/jquery.ui.min.js" />
+        <option value="$PROJECT_DIR$/public/js/main.js" />
         <option value="$PROJECT_DIR$/public/css/main.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="23" />
-    <option name="width" value="1659" />
-    <option name="height" value="1052" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1696" />
+    <option name="height" value="1036" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -131,6 +143,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -194,6 +207,24 @@
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="rbingo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="guiadolugar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -229,18 +260,24 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="recentsLimit" value="5" />
+    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="W:\www\guiadolugar\public" />
+      <recent name="W:\www\guiadolugar\public\css" />
+      <recent name="W:\www\guiadolugar\public\js" />
+    </key>
   </component>
   <component name="RunManager" selected="Ruby.test">
     <configuration default="false" name="test" type="RubyRunConfigurationType" factoryName="Ruby" temporary="true">
@@ -377,14 +414,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="23" y="0" width="1659" height="1052" extended-state="6" />
+    <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19515227" sideWeight="0.78361344" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20257038" sideWeight="0.78361344" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -460,67 +497,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="3" selection-start="1603" selection-end="1603" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/rubystubs20/symbol.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="6" selection-start="1090" selection-end="1090" vertical-scroll-proportion="0.33296704" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="115" selection-end="115" vertical-scroll-proportion="0.11015119">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="15" vertical-scroll-proportion="0.0" />
@@ -536,6 +512,72 @@
         <state line="15" column="31" selection-start="312" selection-end="312" vertical-scroll-proportion="0.24671052" />
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa0.313/jquery-ui-1.10.3.custom/js/jquery-ui-1.10.3.custom.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="7" selection-start="286" selection-end="286" vertical-scroll-proportion="-69.75684">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/main.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="3" selection-start="148" selection-end="148" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="29" selection-start="146" selection-end="146" vertical-scroll-proportion="0.09309967">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/theme.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2877" column="9" selection-start="130445" selection-end="130445" vertical-scroll-proportion="0.78094196">
+          <folding>
+            <marker date="1376152618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376152618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376152618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376152618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376152618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376152618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376152618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376152618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376152618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376152618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376152618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376152618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376152618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376152618000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1376152618000" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1376152618000" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/theme.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13230" column="0" selection-start="293533" selection-end="293599" vertical-scroll-proportion="0.49726176">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/layout.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="12" selection-start="1872" selection-end="1872" vertical-scroll-proportion="-15.038462">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="40" selection-start="568" selection-end="568" vertical-scroll-proportion="0.0">
@@ -543,25 +585,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/main.rb">
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="43" column="20" selection-start="1133" selection-end="1133" vertical-scroll-proportion="0.29791895">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/layout.erb">
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.ui.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="0" selection-end="1826" vertical-scroll-proportion="-3.75">
+        <state line="20" column="4156" selection-start="37221" selection-end="37221" vertical-scroll-proportion="0.37239867">
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/jquery.ui.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1940" column="4156" selection-start="63734" selection-end="63734" vertical-scroll-proportion="0.9441402">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <marker date="1376160998000" expanded="false" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="48" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="17" selection-start="1367" selection-end="1367" vertical-scroll-proportion="0.5888158">
+        <state line="43" column="14" selection-start="794" selection-end="794" vertical-scroll-proportion="0.21058315">
           <folding />
         </state>
       </provider>
