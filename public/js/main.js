@@ -1,6 +1,6 @@
 $(function () {
     function onResize() {
-        if ($(".search-letters").width() > $(".search-letters-wrapper").width()) {
+        if ($(".search-letters").width() > ($(".search-letters-wrapper").width()-30)) {
             $(".search-letters").removeClass('with-arrows');
             $(".search-letters-wrapper").css({
                 "margin": "0 auto"
@@ -8,7 +8,7 @@ $(function () {
         } else {
             $(".search-letters").addClass('with-arrows');
             $(".search-letters-wrapper").css({
-                "left": "-20px"
+                "left": "-5px"
             });
         }
         $.globalVars.maxHeight = $(".search-letters-wrapper").height() - $(".search-letters").height();
@@ -59,7 +59,7 @@ $(function () {
             }
         },
         drag: function (event, ui) {
-            if ($(this).parent().width() > $(this).width()) {
+            if ($(this).parent().width() > ($(this).width()-30)) {
                 return false;
             }
             var newTop = ui.position.top;

@@ -92,8 +92,8 @@ body {
 }
 
 .hero-unit .search-letters.with-arrows{
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 .hero-unit .search-letters.with-arrows .arrow{
     display: block;
@@ -112,16 +112,16 @@ body {
 }
 
 .hero-unit .search-letters .search-letters-wrapper {
-    width: 950px;
+    width: 900px;
     position: relative;
 }
 
 .hero-unit .search-letters a.btn {
-    height: 40px;
-    line-height: 40px;
-    width: 27px;
+    height: 35px;
+    line-height: 35px;
+    width: 25px;
     text-transform: capitalize;
-    font-size: 20px;
+    font-size: 16px;
     padding: 0px;
     background-color: white !important;
     background-position: none !important;

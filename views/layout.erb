@@ -27,41 +27,47 @@
 </head>
 
 <body class="user_img_layout">
-<div class="content_wrapper " id="main-container" style="float:none; margin: 0 auto;">
+<div class="content_wrapper" id="main-container" style="float:none; margin: 0 auto">
   <div>
-    <div class="center-text">
-      <img src="img/logo.png">
-    </div>
-    <div class="hero-unit">
-      <div class="search-letters">
-        <a class="arrow arrow-left" href="javascript:;">
-          <i class="icon icon-double-angle-left"></i>
-        </a>
+    <div class="content">
+      <div class="span10" style="float:none; margin: 0 auto">
+        <div class="center-text">
+          <img src="img/logo.png">
+        </div>
+        <div class="hero-unit">
+          <div class="search-letters">
+            <a class="arrow arrow-left" href="javascript:;">
+              <i class="icon icon-double-angle-left"></i>
+            </a>
 
-        <div class="search-letters-wrapper">
-          <% search_letters.each do |letter| %>
-              <a href="#" class="search-letter btn"><%= letter %></a>
-          <% end %>
-        </div>
-        <a class="arrow arrow-right" href="javascript:;">
-          <i class="icon icon-double-angle-right"></i>
-        </a>
-      </div>
-      <form class="search">
-        <div class="big-search-box">
-          <div class="big-search-text-wrapper">
-            <input type="text" class="big-search-text">
-            <button class="btn btn-primary big-search-button btn-purple">ENCONTRAR</button>
+            <div class="search-letters-wrapper">
+              <% search_letters.each do |letter| %>
+                  <a href="#" class="search-letter btn"><%= letter %></a>
+              <% end %>
+            </div>
+            <a class="arrow arrow-right" href="javascript:;">
+              <i class="icon icon-double-angle-right"></i>
+            </a>
           </div>
+          <form class="search">
+            <div class="big-search-box">
+              <div class="big-search-text-wrapper">
+                <input type="text" class="big-search-text">
+                <button class="btn btn-primary big-search-button btn-purple">ENCONTRAR</button>
+              </div>
+            </div>
+          </form>
         </div>
-      </form>
+        <div style="text-align: left">
+          <%= yield %>
+        </div>
+        <hr>
+        <footer>
+          <p>&copy; Company 2013</p>
+        </footer>
+      </div>
     </div>
-    <%= yield %>
   </div>
-  <hr>
-  <footer>
-    <p>&copy; Company 2013</p>
-  </footer>
 </div>
 </body>
 </html>
