@@ -1,26 +1,35 @@
 class Book
-	@@letters = {}
-	def self.write(page, letters)
-		@@letters[page] = letters
-	end
-	def self.read(page='*')
-		if page == '*' then
-			return @@letters
-		else
-			return @@letters[page]
-		end
-	end
+  attr_accessor :letters
+  def initialize(request)
+    @letters = {}
+  end
+
+  def write(page, letters)
+    @letters[page] = letters
+  end
+
+  def read(page='*')
+    if page == '*' then
+      return @letters
+    else
+      return @letters[page]
+    end
+  end
+
+  def self.burn()
+    #@@letters.delete($request.__id__.to_s)
+  end
 end
 
 
 def tome(paper, letters)
-	erb paper.to_sym, :locals => Book.read().merge(letters)
+  erb paper.to_sym, :locals => request.book.read()
 end
 
 Configure::set('name', 'Guia')
 Configure::set('env', 'development')
 Configure::set('Path', {
-	'css' => 'css',
-	'js' => 'js',
-	'img' => 'img',
+    'css' => 'css',
+    'js' => 'js',
+    'img' => 'img',
 })
