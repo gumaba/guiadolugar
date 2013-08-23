@@ -1,0 +1,25 @@
+<div class="hero-unit">
+  <div class="search-letters">
+    <a class="arrow arrow-left" href="javascript:;">
+      <i class="icon icon-double-angle-left"></i>
+    </a>
+
+    <div class="search-letters-wrapper">
+      <% search_letters.each do |letter| %>
+        <a href="#" class="search-letter btn"><%= letter %></a>
+    <% end %>
+    </div>
+    <a class="arrow arrow-right" href="javascript:;">
+      <i class="icon icon-double-angle-right"></i>
+    </a>
+  </div>
+  <form class="search">
+    <div class="big-search-box">
+      <div class="big-search-text-wrapper">
+        <input type="text" class="big-search-text">
+        <button class="btn btn-primary big-search-button btn-purple">ENCONTRAR</button>
+      </div>
+    </div>
+  </form>
+</div>
+<%= yield_content :content %>
