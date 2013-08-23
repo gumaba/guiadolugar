@@ -24,4 +24,7 @@ helpers do
 				return '' << Configure::get('Path.js') << '/' << file << minified << ".js"
 		end
 	end
+  def l(layout)
+    tome layout.to_sym
+  end
 end

@@ -22,14 +22,23 @@ class Book
 end
 
 
-def tome(paper, letters)
+def tome(paper, letters = {})
   erb paper.to_sym, :locals => request.book.read()
 end
 
 Configure::set('name', 'Guia')
+Configure::set('company_name', 'Guia do Lugar')
 Configure::set('env', 'development')
 Configure::set('Path', {
     'css' => 'css',
     'js' => 'js',
     'img' => 'img',
 })
+
+def logged
+  return true
+end
+
+def has_perm?(perm)
+	return true
+end
