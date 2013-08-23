@@ -1,8 +1,6 @@
 $db = Mongo::Connection.new("localhost", 27017).db("vivareal")
 
 before '*' do
-  session[:lel].push('lel')
-  puts session[:lel].length
   # BR só é BR com gambiarra :P
   request.class.module_eval {
     attr_accessor :book
