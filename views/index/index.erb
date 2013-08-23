@@ -103,5 +103,68 @@ onResume: function (e) {
 		</div>
 	</div>
 </div>
+<div>
+<div class="flexslider carousel" style="margin-top: 20px">
+	<ul class="slides">
+		<li>
+			<a href='http://www.guiadolugar.com.br' target='_blank'><img width='180' height='170' name='imagem1' src='images/publicidades/guiadolugar01.gif' border='0'></a>
+		</li>
+		<li>
+			<a href='http://www.guiadolugar.com.br' target='_blank'><img width='180' height='170' name='imagem1' src='images/publicidades/guiadolugar01.gif' border='0'></a>
+		</li>
+		<li>
+			<a href='http://www.guiadolugar.com.br' target='_blank'><img width='180' height='170' name='imagem1' src='images/publicidades/guiadolugar01.gif' border='0'></a>
+		</li>
+		<li>
+			<a href='http://www.guiadolugar.com.br' target='_blank'><img width='180' height='170' name='imagem1' src='images/publicidades/guiadolugar01.gif' border='0'></a>
+		</li>
+		<li>
+			<a href='http://www.magnis.com.br' target='_blank'><img width='180' height='170' name='imagem1' src='images/publicidades/guiadolugar01.gif' border='0'></a>
+		</li>
+		<li>
+			<a href='www.guiadolugar.com.br' target='_blank'><img width='180' height='170' name='imagem1' src='images/publicidades/guiadolugar01.gif' border='0'></a>
+		</li>
+		<li>
+			<a href='www.guiadolugar.com.br' target='_blank'><img width='180' height='170' name='imagem1' src='images/publicidades/guiadolugar01.gif' border='0'></a>
+		</li>
+		<li>
+			<a href='www.guiadolugar.com.br' target='_blank'><img width='180' height='170' name='imagem1' src='images/publicidades/guiadolugar01.gif' border='0'></a>
+		</li>
+		<li>
+			<a href='www.guiadolugar.com.br' target='_blank'><img width='180' height='170' name='imagem1' src='images/publicidades/guiadolugar01.gif' border='0'></a>
+		</li>
+		<li>
+			<a href='www.guiadolugar.com.br' target='_blank'><img width='180' height='170' name='imagem1' src='images/publicidades/guiadolugar01.gif' border='0'></a>
+		</li>
+	</ul>
+</div>
+<div class="well row-fluid">
+	<div class="well span4">
+		xd
+	</div>
+	<div class="well span4" style="background-image:url('http://www.guiadolugar.com.br/index/img/anuncie.png')">
+		xd
+	</div>
+	<div class="well span4">
+		xd
+	</div>
+</div>
+<script type="text/javascript">
+$(function(){
+	$('.flexslider').flexslider({
+        animation: "slide",
+        animationLoop: true,
+        itemWidth: 170,
+        itemMargin: 5,
+        minItems: 2,
+        maxItems: 5,
+		randomize:false,
+		pauseOnAction: false,
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+     });
+});
+</script>
 <% end %>
 <%= l :'layout.with-search' %>
