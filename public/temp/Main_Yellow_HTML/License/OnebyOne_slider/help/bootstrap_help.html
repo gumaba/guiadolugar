@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>How to use it in bootstrap</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+</head>
+
+
+<body>
+	<div class="container">
+		<h1 class="center">&ldquo;How to use it in bootstrap&rdquo;</h1>
+		<hr>
+<ol>       
+<li><h4>First of all import the required Javascript</h4>
+<pre>
+&lt;script src=&quot;js/jquery.1.8.2.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/jquery.onecarousel.min.js&quot;&gt;&lt;/script&gt;
+</pre>
+<h4>Aditional to the bootstrap CSS, we have to include the animate.css at the same time.
+Pleae note that this <strong>animate.css is customized</strong>, it's different with the one in the original version.
+</h4>
+<pre>
+&lt;link href=&quot;css/bootstrap.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;css/bootstrap-responsive.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;css/animate.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link href=&quot;css/style.css&quot; rel=&quot;stylesheet&quot;&gt;
+</pre>
+	</li> 
+	<li>Then you've to add the the slider's content (image, text etc) in the HTML, something looks like:<br />
+<pre>&lt;div id=&quot;myCarousel&quot; class=&quot;carousel slide&quot;&gt;
+  &lt;!-- Carousel items --&gt;
+  &lt;div class=&quot;carousel-inner&quot;&gt;
+    &lt;div class=&quot;active item&quot;&gt;&hellip;&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&hellip;&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&hellip;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- Carousel nav --&gt;
+  &lt;a class=&quot;carousel-control left&quot; href=&quot;#myCarousel&quot; data-slide=&quot;prev&quot;&gt;&amp;lsaquo;&lt;/a&gt;
+  &lt;a class=&quot;carousel-control right&quot; href=&quot;#myCarousel&quot; data-slide=&quot;next&quot;&gt;&amp;rsaquo;&lt;/a&gt;
+&lt;/div&gt;  
+</pre>	
+</li>
+<li>
+	Finally use our jQuery plugin to generate the slider, just use <strong>oneCarousel</strong> instead of carousel:
+<pre>$(document).ready(function() { 
+    $('#banner').<strong>oneCarousel</strong>({
+	    	// the global animation
+		<strong>easeIn</strong>: 'rotateIn',
+		// delay time of the slideshow
+		interval: 5000,
+		// pause when user hover
+		pause: 'hover'
+    });  
+}); 	
+</pre>
+You can find more infromation from <a href="http://twitter.github.com/bootstrap/javascript.html#carousel">http://twitter.github.com/bootstrap/javascript.html#carousel</a>
+There is only one more option of the carousel, the <strong>easeIn</strong>, it's the default ease in animation if you don't specify the animation in the element. And like the original OneByOne slider, we can customize each caption text's animation at same time. Just use the add the <strong>data-animate</strong> in the HTML tag. For example:
+<pre>
+&lt;div class=&quot;carousel-caption move-up&quot;&gt;
+	&lt;h1 <strong>data-animate</strong>=&quot;rollIn&quot;&gt;OneByOne in Bootstrap&lt;/h1&gt;
+	&lt;p class=&quot;text-info&quot; <strong>data-animate</strong>=&quot;bounceInUp&quot;&gt;Your favourite OneByOne Slider now is available in bootstrap as Carousel.&lt;span class=&quot;label label-important&quot;&gt;WoYa!&lt;/span&gt;&lt;/p&gt;
+	&lt;a class=&quot;btn btn-large btn-primary&quot; href=&quot;#&quot; <strong>data-animate</strong>=&quot;bounceInLeft&quot;&gt;Download today&lt;/a&gt;
+&lt;/div&gt;
+</pre>
+The animation of each text is rollIn, bounceInUp, bounceInLeft here.
+</li>
+</ol>
+			
+		<p class="append-bottom alt large"><strong><a href="http://codecanyon.net/user/sike?ref=sike">Sike</a></strong></p>
+		
+		<hr class="space">
+	</div><!-- end div .container -->
+</body>
+</html>

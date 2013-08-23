@@ -1,0 +1,16 @@
+June 17th (v.1.0.428)
+
+	Update: Twitter script updated
+	
+Changed files:
+Please update all .html files and add "twitter" folder.
+
+
+
+---------------------------------------------
+v.1.0.252 (February 11)
+	Added: Responsive mode custom menu
+	Fixed: Iphone 5 menu issue 
+	
+
+
