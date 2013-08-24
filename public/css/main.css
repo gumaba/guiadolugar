@@ -13,7 +13,7 @@ body {
     text-align: center;
 }
 
-.hero-unit {
+.hero-unit.yellow {
     background-image: url('../img/bg-1.png');
     padding: 2%;
 }
@@ -138,6 +138,7 @@ body {
 
 .btn.btn-purple {
     background-color: #6b0199;
+    color:white;
 }
 
 .content_wrapper {

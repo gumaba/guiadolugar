@@ -1,5 +1,5 @@
 get '/admin' do
-  if logged then
-    'lel'
-  end
+	logged do |user|
+		tome 'admin/index'
+	end
 end

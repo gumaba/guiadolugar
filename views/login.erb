@@ -1,4 +1,23 @@
 <%  content_for :content do %>
-
+	<div class="row-fluid" style="margin-top: 20px">
+		<div class="span6" style="display:block;float:none;margin: 0 auto!important;">
+			<form method="post" action="login" class="feedback_form">
+				<% if request.book.glossary?('login_error') then %>
+					<div class="alert alert-error">
+						<i class="icon-warning-sign"></i> <%= request.book.glossary!('login_error') %>
+					</div>
+				<% end %>
+				<div>
+					<input type="text" name="email" class="field-name form_field span12" placeholder="E-mail do usuário"/>
+				</div>
+				<div>
+					<input type="password" name="password" class="field-name form_field span12" placeholder="Senha" />
+				</div>
+				<div class="center-text" style="margin-top: 20px">
+					<input type="submit" class="feedback_go" value="Entrar!">
+				</div>
+			</form>
+		</div>
+	</div>
 <% end %>
 <%= erb :'layout.login' %>
