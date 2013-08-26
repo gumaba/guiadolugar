@@ -1,1 +1,4 @@
-<%= yield_content :content %>
+<% content_for :box do %>
+	<%= yield_content :content %>
+<% end %>
+<%= l "base" %>
