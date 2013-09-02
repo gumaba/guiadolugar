@@ -1,0 +1,114 @@
+<% content_for :content do %>
+    <div class="row-fluid">
+      <div class="span12">
+        <div class="box box-green">
+          <div class="box-title">
+            <h3><i class="icon-reorder"></i> Adicionar Empresa</h3>
+          </div>
+          <div class="box-content">
+            <form class="form-horizontal form-bordered form-row-stripped" id="add-empresa-form" method="post" enctype="multipart/form-data">
+              <%= controls_select 'planos', 'Planos', planos %>
+              <%= controls_multiselect 'titulos', 'Titulos', titulos, :class => 'chosen' %>
+              <%= controls_input 'estado', 'Estado', :class => 'typeahead-estados' %>
+              <%= controls_input 'cidade', 'Cidade', :class => 'typeahead-cidades' %>
+              <%= controls_input 'nome', 'Nome' %>
+              <%= controls_text 'endereco', 'Endereço' %>
+              <%= controls_text 'descricao', 'Descrição', :class => 'wysihtml5 span12' %>
+              <%= controls_input 'cep', 'CEP' %>
+              <%= controls_input 'coordenadas', 'Coordenadas' %>
+              <div class="control-group">
+                <label class="control-label" for="add-video-input">Videos</label>
+
+                <div class="controls">
+                  <input type="text" id="add-video-input"/>
+                  <a class="btn" id="add-video-button">Adicionar Video</a>
+                  <br/>
+                  <br/>
+
+                  <div id="videos-showcase">
+                    <% if params['videos'] then %>
+                        <% params['videos'].each do |k| %>
+                            <div class="video-holder">
+                              <input type="hidden" name="videos[]" value="<%= k %>"/>
+
+                              <div><a href="javascript:;" class="videos-remove-video" data-value="<%= k %>">Remover
+                                Vídeo</a></div>
+                              <iframe width="300" height="200" src="http://www.youtube.com/embed/<%= k %>?autoplay=0" style="margin-right:10px" frameborder="0"></iframe>
+                            </div>
+                        <% end %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+              <div class="control-group">
+                <label class="control-label">Telefones</label>
+
+                <div class="controls">
+                  <select type="text" id="add-telefones-input-name">
+                    <% telefone_tipos.each do |k, v| %>
+                        <option value="<%=k%>"><%=v%></option>
+                    <% end %>
+                  </select>
+                  <input type="text" id="add-telefones-input-ddd" class="ddd-mask span1" placeholder="DDD"/>
+                  <input type="text" id="add-telefones-input-number" placeholder="Numero"/>
+                  <a class="btn" id="add-telefones-button">Adicionar Telefone</a>
+                  <br/>
+                  <br/>
+
+                  <div id="telefones-showcase">
+                    <% if params['telefones'] then %>
+                        <% params['telefones'].each do |k, v| %>
+                            <span class="badge badge-lime telefone-badge" style="margin-right: 5px">
+                                <input type="hidden" name="telefones[<%= k %>][tipo]" value="<%= v['tipo'] %>"/>
+                                <input type="hidden" name="telefones[<%= k %>][ddd]" value="<%= v['ddd'] %>"/>
+                                <input type="hidden" name="telefones[<%= k %>][telefone]" value="<%= v['telefone'] %>"/>
+                                <a href="javascript:;" class="icon-remove telefone-badge-remove"></a> [<%= telefone_tipos[v['tipo'].to_i] %>] <%= v['ddd'] %> <%= v['telefone'] %>
+                            </span>
+                        <% end %>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+              <%= controls_input 'email', 'E-mail' %>
+              <%= controls_input 'website', 'Website' %>
+              <div class="control-group">
+                <label class="control-label">Logo</label>
+
+                <div class="controls">
+
+
+                  <div class="fileupload fileupload-new" data-provides="fileupload">
+                    <div class="fileupload-new thumbnail" style="width: 200px; height: 150px;">
+                      <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt=""/>
+                    </div>
+                    <div class="fileupload-preview fileupload-exists thumbnail" style="max-width: 200px; max-height: 150px; line-height: 20px;"></div>
+                    <div>
+                                               <span class="btn btn-file"><span class="fileupload-new">Select image</span>
+                                               <input type="file" class="default" name="logo"/>
+                                               <span class="fileupload-exists">Change</span>
+                                               </span>
+                      <a href="#" class="btn fileupload-exists" data-dismiss="fileupload">Remove</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <a href='admin/empresas' type="button" class="btn">Voltar</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript" src="<%= assets 'js', 'admin/empresas' %>"></script>
+      <script type="text/javascript" src="assets/chosen-bootstrap/chosen.jquery.min.js"></script>
+      <script type="text/javascript" src="assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
+      <script type="text/javascript" src="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+      <script type="text/javascript" src="assets/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
+      <script type="text/javascript" src="js/jquery.meio.js"></script>
+      <link rel="stylesheet" type="text/css" href="assets/chosen-bootstrap/chosen.min.css"/>
+      <link rel="stylesheet" type="text/css" href="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css"/>
+      <link rel="stylesheet" type="text/css" href="assets/bootstrap-fileupload/bootstrap-fileupload.css"/>
+<% end %>
+<%= l 'admin' %>

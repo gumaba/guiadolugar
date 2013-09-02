@@ -46,7 +46,7 @@ end
 
 
 def tome(paper, letters = {})
-	erb paper.to_sym, :locals => request.book.read()
+	erb paper.to_sym, :locals => letters.merge(request.book.read())
 end
 
 Configure::set('name', 'Guia')

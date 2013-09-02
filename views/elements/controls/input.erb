@@ -1,0 +1,7 @@
+<div class="control-group">
+  <label class="control-label" for="<%= name %>"><%= title %></label>
+
+  <div class="controls">
+    <input type="text" name="<%= name %>" id="<%= name %>" <% attr.each do |key, value| %><%= "#{key}=\"#{value}\"" %><% end %> value="<%= params[name] || default %>" />
+  </div>
+</div>

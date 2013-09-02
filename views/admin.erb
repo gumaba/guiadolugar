@@ -1,3 +1,224 @@
-<% content_for :box do %>
-<% end %>
-<%= l 'base' %>
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head>
+  <base href="<%= request.base_url %>">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Administração - Guia do Lugar</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+  <!--base css styles-->
+  <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/bootstrap/bootstrap-responsive.min.css">
+  <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/normalize/normalize.css">
+
+  <!--page specific css styles-->
+
+  <!--flaty css styles-->
+  <link rel="stylesheet" href="css/flaty.css">
+  <link rel="stylesheet" href="css/flaty-responsive.css">
+
+  <link rel="shortcut icon" href="img/favicon.html">
+
+  <script src="assets/modernizr/modernizr-2.6.2.min.js"></script>
+  <script src="assets/jquery/jquery-1.10.1.min.js"></script>
+  <script src="assets/bootstrap/bootstrap.min.js"></script>
+  <script src="assets/nicescroll/jquery.nicescroll.min.js"></script>
+
+  <!--page specific plugin scripts-->
+  <script src="assets/flot/jquery.flot.js"></script>
+  <script src="assets/flot/jquery.flot.resize.js"></script>
+  <script src="assets/flot/jquery.flot.pie.js"></script>
+  <script src="assets/flot/jquery.flot.stack.js"></script>
+  <script src="assets/flot/jquery.flot.crosshair.js"></script>
+  <script src="assets/flot/jquery.flot.tooltip.min.js"></script>
+  <script src="assets/sparkline/jquery.sparkline.min.js"></script>
+  <script type="text/javascript" src="<%= assets 'js', 'underscore.min' %>"></script>
+  <script type="text/javascript" src="<%= assets 'js', 'jquery.ui' %>"></script>
+  <script type="text/javascript" src="<%= assets 'js', 'angular' %>"></script>
+  <script type="text/javascript" src="<%= assets 'js', 'main' %>"></script>
+
+  <!--flaty scripts-->
+  <script src="js/flaty.js"></script>
+</head>
+<body class="skin-yellow">
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to
+    improve your experience.</p>
+<![endif]-->
+
+<!-- BEGIN Navbar -->
+<div id="navbar" class="navbar navbar-yellow">
+  <div class="navbar-inner">
+    <div class="container-fluid">
+      <!-- BEGIN Brand -->
+      <a href="#" class="brand">
+        <small>
+          <i class="icon-map-marker"></i>
+          Guia do Lugar
+        </small>
+      </a>
+      <!-- END Brand -->
+
+      <!-- BEGIN Responsive Sidebar Collapse -->
+      <a href="#" class="btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+        <i class="icon-reorder"></i>
+      </a>
+      <!-- END Responsive Sidebar Collapse -->
+
+      <!-- BEGIN Navbar Buttons -->
+      <ul class="nav flaty-nav pull-right">
+
+        <!-- BEGIN Button User -->
+        <li class="user-profile">
+          <a data-toggle="dropdown" href="#" class="user-menu dropdown-toggle">
+            <img class="nav-user-photo" src="img/demo/avatar/avatar1.jpg" alt="Penny's Photo"/>
+                                <span class="hidden-phone" id="user_info">
+                                    <%= user.name || user.email %>
+                                </span>
+            <i class="icon-caret-down"></i>
+          </a>
+
+          <!-- BEGIN User Dropdown -->
+          <ul class="dropdown-menu dropdown-navbar" id="user_menu">
+            <% if user.last_login then %>
+                <li class="nav-header">
+                  <i class="icon-time"></i>
+                  Ultimo login: <%= user.last_login.strftime '%d/%m/%Y %H:%M:%S' %>
+                </li>
+            <% end %>
+
+            <li>
+              <a href="#">
+                <i class="icon-cog"></i>
+                Account Settings
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="icon-user"></i>
+                Edit Profile
+              </a>
+            </li>
+
+            <li>
+              <a href="#">
+                <i class="icon-question"></i>
+                Help
+              </a>
+            </li>
+
+            <li class="divider visible-phone"></li>
+
+            <li class="visible-phone">
+              <a href="#">
+                <i class="icon-tasks"></i>
+                Tasks
+                <span class="badge badge-warning">4</span>
+              </a>
+            </li>
+            <li class="visible-phone">
+              <a href="#">
+                <i class="icon-bell-alt"></i>
+                Notifications
+                <span class="badge badge-important">8</span>
+              </a>
+            </li>
+            <li class="visible-phone">
+              <a href="#">
+                <i class="icon-envelope"></i>
+                Messages
+                <span class="badge badge-success">5</span>
+              </a>
+            </li>
+
+            <li class="divider"></li>
+
+            <li>
+              <a href="logout">
+                <i class="icon-off"></i>
+                Logout
+              </a>
+            </li>
+          </ul>
+          <!-- BEGIN User Dropdown -->
+        </li>
+        <!-- END Button User -->
+      </ul>
+      <!-- END Navbar Buttons -->
+    </div>
+    <!--/.container-fluid-->
+  </div>
+  <!--/.navbar-inner-->
+</div>
+<!-- END Navbar -->
+
+<!-- BEGIN Container -->
+<div class="container-fluid sidebar-black" id="main-container">
+  <!-- BEGIN Sidebar -->
+  <div id="sidebar" class="nav-collapse">
+    <!-- BEGIN Navlist -->
+    <ul class="nav nav-list">
+      <!-- BEGIN Search Form -->
+      <li>
+        <form target="#" method="GET" class="search-form">
+                            <span class="search-pan">
+                                <button type="submit">
+                                  <i class="icon-search"></i>
+                                </button>
+                                <input type="text" name="search" placeholder="Search ..." autocomplete="off"/>
+                            </span>
+        </form>
+      </li>
+      <!-- END Search Form -->
+      <li class="active">
+        <a href="admin/empresas">
+          <i class="icon-building"></i>
+          <span>Empresas</span>
+        </a>
+      </li>
+    </ul>
+    <!-- END Navlist -->
+
+    <!-- BEGIN Sidebar Collapse Button -->
+    <div id="sidebar-collapse" class="visible-desktop">
+      <i class="icon-double-angle-left"></i>
+    </div>
+    <!-- END Sidebar Collapse Button -->
+  </div>
+  <!-- END Sidebar -->
+
+  <!-- BEGIN Content -->
+  <div id="main-content">
+    <%= yield_content :content %>
+  </div>
+  <!-- END Main Content -->
+
+  <footer>
+    <p></p>
+  </footer>
+
+  <a id="btn-scrollup" class="btn btn-circle btn-large" href="#"><i class="icon-chevron-up"></i></a>
+</div>
+<!-- END Content -->
+</div>
+<!-- END Container -->
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,11 @@
+<div class="control-group">
+  <label class="control-label" for="<%= name %>"><%= title %></label>
+
+  <div class="controls">
+    <select name="<%= name %>" id="<%= name %>" <% attr.each do |key, value| %><%= "#{key}=\"#{value}\"" %><% end %>>
+    <% options.each do |key, value| %>
+        <option value="<%= key %>" <% if params[name] && params[name] == key.to_s then %>selected="selected"<% end %>><%= value %></option>
+    <% end %>
+    </select>
+  </div>
+</div>

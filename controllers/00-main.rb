@@ -1,3 +1,5 @@
+require 'models/user'
+
 $db = Mongo::Connection.new("localhost", 27017).db("guiadolugar")
 
 before '*' do
@@ -7,6 +9,11 @@ before '*' do
 	}
 	request.book = Book.new(request, session)
 	request.book.write('search_letters', ['#'] + Array('a'..'z'))
+
+  if session.has_key?('user') then
+      request.book.write('user', User.new(session['user']))
+  end
+
 end
 
 before '/admin*' do
@@ -21,6 +28,11 @@ end
 
 get '/login' do 
 	tome 'login'
+end
+
+get '/logout' do
+  session.delete('user')
+  redirect '/login'
 end
 
 post '/login' do
